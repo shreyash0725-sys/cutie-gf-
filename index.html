@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>For Stuti ❤️ | Happy Girlfriend's Day</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Fredoka:wght@400;500;600;700&family=Nunito:wght@600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Dynamic Animated Background Canvas -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- Celebration Fireworks & Petals Canvas -->
+  <canvas id="fx-canvas"></canvas>
+
+  <!-- Sound Toggle Button -->
+  <button id="sound-toggle" class="icon-btn" aria-label="Toggle Sound">
+    <span id="sound-icon">🔊</span>
+  </button>
+
+  <!-- Main Card Container -->
+  <main class="app-card" id="app-card">
+    
+    <!-- Decorative Floating Elements on Card -->
+    <div class="card-badge">FOR MY FAVORITE PERSON ✨</div>
+
+    <!-- PAGE 1: Question -->
+    <section class="page active" id="page-1">
+      <div class="header-icon bounce">🧐</div>
+      <h1 class="title-lg">Do youu knoww what todayyy isss???🧐🧐🧐</h1>
+      <p class="subtitle">Let me tell you...</p>
+      <button class="btn btn-primary" onclick="app.nextPage(2)">Let's Go! ✨</button>
+    </section>
+
+    <!-- PAGE 2: Happy Girlfriend's Day -->
+    <section class="page" id="page-2">
+      <div class="heart-pulse-icon">💖</div>
+      <h1 class="title-xl gradient-text">HAPPYYY GIRLFRIEND'S DAYYYY STUTIIII</h1>
+      <div class="emoji-banner">🥰 😘 😍 🤩</div>
+      <button class="btn btn-primary" onclick="app.nextPage(3)">Continue ❤️</button>
+    </section>
+
+    <!-- PAGE 3: Passcode Lock -->
+    <section class="page" id="page-3">
+      <div class="lock-icon">🔒</div>
+      <h2 class="title-md">Enter Security PIN</h2>
+      <p class="pin-sub">Only Stuti is allowed past this point!</p>
+
+      <!-- PIN Indicator Dots -->
+      <div class="pin-display">
+        <div class="dot" id="dot-0"></div>
+        <div class="dot" id="dot-1"></div>
+        <div class="dot" id="dot-2"></div>
+        <div class="dot" id="dot-3"></div>
+      </div>
+
+      <div class="hint-container" id="hint-box"></div>
+
+      <!-- Keypad -->
+      <div class="keypad">
+        <button class="key" onclick="app.pressKey('1')">1</button>
+        <button class="key" onclick="app.pressKey('2')">2</button>
+        <button class="key" onclick="app.pressKey('3')">3</button>
+        <button class="key" onclick="app.pressKey('4')">4</button>
+        <button class="key" onclick="app.pressKey('5')">5</button>
+        <button class="key" onclick="app.pressKey('6')">6</button>
+        <button class="key" onclick="app.pressKey('7')">7</button>
+        <button class="key" onclick="app.pressKey('8')">8</button>
+        <button class="key" onclick="app.pressKey('9')">9</button>
+        <button class="key key-action" onclick="app.clearPin()">C</button>
+        <button class="key" onclick="app.pressKey('0')">0</button>
+        <button class="key key-action" onclick="app.backspacePin()">⌫</button>
+      </div>
+    </section>
+
+    <!-- PAGE 4: Password Success & Fireworks -->
+    <section class="page" id="page-4">
+      <div class="victory-stars">🌟 🎉 🌟</div>
+      <h1 class="title-xl text-pop">YAYYYYYY</h1>
+      <div class="emoji-row-lg">😁 😁 😁</div>
+      <p class="celebration-subtitle">🌸 ✨ Flowers & Fireworks for you! ✨ 🌸</p>
+      <button class="btn btn-primary" onclick="app.nextPage(5)">Read My Letter 💌</button>
+    </section>
+
+    <!-- PAGE 5: Letter Part 1 -->
+    <section class="page" id="page-5">
+      <div class="letter-badge">MESSAGE FROM THE HEART (1/2)</div>
+      <div class="scroll-content">
+        <p class="para-highlight">
+          Heyyyy cutieeeee. I loveee youuu soo muchh 🌟. You're my favouriteeeee 😁🥰.
+        </p>
+        <p class="para-text">
+          THERES NOTHING BETTER THAN BEING NEXT TO YOU AND TALKING <span class="cute-tag">(and doing gulu gulu 😛)</span>.
+        </p>
+        <p class="para-text">
+          You're more than just a girlfriend. You're my cutie pie, lil baby, golgappa, rasgulla, rasmalai 😋😋😋. Anddd most important of alll <strong>"MYYYY BESTIEEEEE"</strong>.
+        </p>
+        <p class="para-text">
+          You're sooo specialllll babyyy ❤️. I miss pulling your cheeks and laughing with you. Looking at you smile makes everything better. There's no other better treatment than that.
+        </p>
+      </div>
+      <button class="btn btn-primary" onclick="app.nextPage(6)">Next Page ➡️</button>
+    </section>
+
+    <!-- PAGE 6: Letter Part 2 -->
+    <section class="page" id="page-6">
+      <div class="letter-badge">MESSAGE FROM THE HEART (2/2)</div>
+      <div class="scroll-content">
+        <p class="para-text">
+          You can tell me about anything let it be sad or happy. I'll be the friend you need and the strict parent too. I know I sound like an unc. I'll take care of you like a baby. Princess treatment everyday ✨.
+        </p>
+        <p class="para-text">
+          I hope I love you the way you like and more. If I do anything wrong tell it to me. LALALALALA YAYYYY THAT VIDEO WAS A DISTRACTION SO THAT YOU THINK THAT I WONT SEND ANYTHING TODAY 😝.
+        </p>
+        <p class="para-text">
+          I love you so much baby. I'm so proud of you and will always be. Nang gotilla lego kodsbeku ninu. Nan golgappa kodsthini. Deal? 😂.
+        </p>
+        <p class="para-text">
+          I'm grateful to have you in my life cutie 🥰. I would choose you again and again. Thank you for being mine 🥹.
+        </p>
+        <p class="para-highlight">
+          Stay happy stuti. The satisfaction that I get when I see you smile cannot be compared to anything. Smileeeeee EEEEEEEE ANTHA 😁.
+        </p>
+        <p class="para-sub">
+          That's all for today cutie. Hope you loved it 😘. Byeeeeee mwah mwah mwah mwah
+        </p>
+      </div>
+      <button class="btn btn-primary" onclick="app.nextPage(7)">Something Special ✨</button>
+    </section>
+
+    <!-- PAGE 7: Slow Reveal Message -->
+    <section class="page" id="page-7">
+      <div class="reveal-wrapper">
+        <div id="reveal-text-1" class="reveal-box hide">
+          YOU'RE THE BEST GIRLFRIEND 💋❤️🌟🤩😋😁😝🤩😍🥳
+        </div>
+        <div id="reveal-text-2" class="reveal-box-secondary hide">
+          I'm so luckyyy to have youu cutieeee
+        </div>
+      </div>
+      <button id="page7-btn" class="btn btn-primary btn-fade" onclick="app.nextPage(8)">One Last Thing... 🏠</button>
+    </section>
+
+    <!-- PAGE 8: Final Heartfelt Closing -->
+    <section class="page" id="page-8">
+      <div class="final-card">
+        <div class="home-icon">🏠</div>
+        <h1 class="final-title">
+          I hope my love feels like home to you 🥹
+        </h1>
+        <p class="final-subtitle">
+          Let's live under the same roof one day 🐕
+        </p>
+        <div class="final-emojis">🐶 💕 🌸 💕 🐶</div>
+        <button class="btn btn-secondary" onclick="app.restart()">Replay Experience 🔄</button>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
